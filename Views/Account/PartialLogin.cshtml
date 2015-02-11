@@ -1,0 +1,16 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <strong style="color:white">Abc @Session["Name"] @*@Html.Encode(User.Identity.Name)*@</strong>
+    @Html.ActionLink("LOG OUT", "Logout", "Account")
+    @*@Html.ActionLink("My Team", "TeamIndex", "Team", new { id = this.Model.Id})*@
+
+
+}
+else
+{
+
+    @*<li>*@<a href="#modal-login" data-toggle="modal">LOGIN&nbsp;<i class="fa fa-arrow-right blue"></i></a>
+    @*<a href="#modal-register" data-toggle="modal">REGISTER&nbsp;<i class="fa fa-arrow-right blue"></i></a>
+        </li>*@
+
+}
